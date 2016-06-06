@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/jcu.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="js/jcu.min.js"></script>
+  <style>
+
+
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1000px}
+
+    .content {
+      padding-bottom: 2em;
+    }
+    
+    /* Set gray background color and 100% height */
+    body {
+      background: #fff;
+      padding-top: 106px;
+      min-width: 20em
+    }
+    
+    /* footer */
+
+    footer {
+      background-color: #DDD;
+      color: #2d2d2d;
+      font-size: 10px;
+      padding: 15px;
+      margin: 0 10px;
+    }
+
+    footer a, footer a:active{
+      font-weight: bold;
+      color: #2d2d2d;  
+    }
+
+    footer a:hover{
+      color: #6d6d6d;
+      text-decoration: none;
+    } 
+
+    .footer_flags {
+      float: left;
+      padding-right: 10px;
+    }   
+
+    .footer_logoline {
+      margin-bottom: 30px;
+    }
+
+    .footer_trad {
+      padding-top: 2em;
+      padding-left: 2em;
+    }
+
+    .footer_racgp {
+      padding-top: 10px;
+    }
+
+    .footer_rural {
+      padding-top: 10px;
+    }
+
+    .footer_logos {
+      text-align: none;
+      padding-top: 2em;
+    }
+
+    /* xl screens */
+    @media (max-width: 75em) {
+      .card-img-top {
+        float: left;
+      }
+      .card-block {
+        padding-top: 0;
+      }
+    }  
+
+    /* lg screens */
+    @media (max-width: 75em) {
+      .card-img-top {
+        margin-right: 20px;
+      }
+      .footer_logos {
+      text-align: center;
+      }
+    }
+    
+    /* md screens */
+    @media screen and (max-width: 48em) {
+      .sidenav {
+        height: auto;
+      }
+      .row.content {
+        height: auto;
+      } 
+      .header-image {
+        height: 200px !important;
+      }      
+      .topnavlinks{
+        display: none;
+      }
+      .icons {
+        display: block !important;
+      }
+      .footer_flags {
+      float: left;
+      padding-left: 2em;
+      }      
+      .gmt_breadcrumbs {
+        padding: 1em 0;
+      }
+    }
+
+    /* sm screens */
+    @media (max-width: 34em) {
+      .header-image {
+        display: none !important;
+      }
+      .insidesidenav {
+        margin-top: 0 !important;
+      }
+      .nav-link {
+        margin:0 !important;
+      }
+      .navbar-brand-gmt img{
+        width:16em;
+        padding-top: .5em;
+      }
+      .bkgsearchmenu{
+        background-color: #F6F8F8;
+        height:70px;
+      }
+      .maincontent{
+        margin-top: 10px;
+        padding-top: 0
+      }
+      .searchandmenu{
+        margin-top: -50px;
+      }
+      .footer_logos img {
+        width: 90%;
+      }
+      .card-img-top {
+        float: none;
+      }
+      .card-block {
+        padding-top: 20px;
+      }
+      .card {
+        text-align: center;
+      }
+    }
+
+
+    @media (max-width: 26em) {
+
+      .navbar-brand-gmt img{
+        width:12em;
+        padding-top: 1em;
+      }
+    }
+
+    
+
+    /* top gradient navbar */
+    .jcu-bg--gradient-orange-rev {
+        min-height:110px;
+    }
+
+    .navbar-header {
+        margin-top: 6px;
+        padding-right: 10px;
+        background-color: #000
+    }
+
+    .insidenavbrand {
+        float: left;
+    }
+    .insidenavbrand img{
+        float: right;
+        padding-right: 10px;  
+    }
+
+    .topnav {
+        float: right;
+    }
+
+    .topnav > a {
+        color: #FFF;  
+        line-height: 100px;
+        /* border-top: 6px solid transparent; */
+        margin-right: 10px;
+    }
+
+    .topnav > a:hover{
+       /* border-top: 6px solid #FEEACF;*/
+        color: #FEEACF;
+    }
+    .topnav > a.selected-nav {
+        border-top: 6px solid #FEEACF;
+        color: #FEEACF;
+    }
+
+    .header-image {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: url("images/beach.jpg") no-repeat top center scroll;
+        -webkit-background-size: auto;
+        -moz-background-size: auto;
+        background-size: auto;
+        -o-background-size: auto;
+        margin: 0 auto;
+        height: 320px;
+    }
+
+    .icons{
+      display:none;
+      font-size: 20px;
+    }
+
+    .nav-link{
+      padding-right: 10px;
+    }
+
+    /* sidenav */
+    .sidenav {
+      background-color: #F6F8F8;
+      height: 120%;
+    }
+
+    .insidesidenav {
+      margin-top: -94px;
+      float: right;
+      z-index: 1000;
+    }
+
+    .sidenavline {
+      border-top: 6px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    .burger_icon {
+    }
+
+
+    /* submenu sidenav */
+    .sidenavline .nav-pills .nav-link{
+      display: block;
+      padding: .5em 1em;
+      background-color: #FFF;
+      color: #6c6c6c;
+    }
+
+    .sidenavline .nav-pills .nav-link.active, .sidenavline .nav-pills .nav-link.active:focus, .sidenavline .nav-pills .nav-link.active:hover,
+    .sidenavline .nav-pills .nav-item.open .nav-link,
+    .sidenavline .nav-pills .nav-item.open .nav-link:focus,
+    .sidenavline .nav-pills .nav-item.open .nav-link:hover {
+      color: #4d4d4d;
+      cursor: default;
+      background-color: #F6F8F8;
+    }
+
+    .sidenavline .nav-pills .nav-item .nav-link:hover {
+        color: #4d4d4d;
+        background-color: #F6F8F8;
+    }
+
+    .submenustack{
+      margin-top: 4px;
+    }
+
+    .submenustack .nav-link:before {
+      content: "\00BB \0020 ";
+      padding-left: 20px 
+    }
+
+
+    .maincontent {
+      padding: 20px 0 10px 30px;
+    }
+
+
+
+    /* breadcrumbs */
+    .gmt_breadcrumbs {
+      list-style: none;
+      padding-bottom: 1em;
+    }
+
+    .gmt_breadcrumbs a:hover{
+      color: #2d2d2d;
+      text-decoration: none;
+    }    
+
+    .gmt_breadcrumbs li{
+      float:left;
+      font-style: italic;
+    }
+
+    ol {
+      padding-left:0;
+    }
+
+    .divider{
+       padding:0 4px;
+    }
+
+    .clear {
+    clear: both;
+    }
+
+    /* headings */
+    H1 {
+      color: #EB5F2E;  
+      font-weight: 400;
+    }
+
+    H2 {
+      color: #6C6C6C;  
+      font-weight: 300;
+    }
+
+    H4 {
+      color: #6C6C6C;  
+      font-weight: 300;
+    }
+
+    /* cards */  
+    .card {
+      border: none;
+    }  
+
+    .card-img-top {
+      padding: 0;
+      border-top-right-radius: 2em;
+    }
+
+    .card-block {
+      padding-left: 0;
+    }
+
+    .btn-sm {
+      border-radius: .2rem;
+      color: #6C6C6C;
+    }
+
+    .img-right{
+        float: right;
+    }
+
+    hr {
+      padding: 10px 0;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header id="header" class="header clearfix">
+  <div class="jcu-bg--gradient-orange-rev navbar-fixed-top grad">   
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="col-xl-4 col-lg-4 col-md-5 insidenavbrand">
+          <a class="navbar-brand-gmt" href="#top-page-banner"><img src="images/gmt_logo.png" alt="logo" role="banner"></a>
+        </div>
+      </div> <!-- .navbar-header -->
+             
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="col-md-7">
+          <nav class="topnav">
+                  <a class="nav-link active" href="#about" title="Contact Information" alt="Contact Information"><span class="icons icon-phonebook"></span> <span class="topnavlinks">Contact Us</span></a>
+                  <a class="nav-link" href="#services" title="Login to MYGMT" alt="Login to MYGMT"><span class="icons icon-user"></span> <span class="topnavlinks">MYGMT Login</span></a>
+          </nav>
+      </div><!-- .navbar-collapse -->
+
+    </div><!-- end container-->
+  </div><!--end navbar-fixed-top -->
+
+</header>
+
+<header class="bkgsearchmenu"></header>
+
+
+
+<!-- Full Width Image Header -->
+<header class="header-image">
+</header>
+
+
+<div class="container-fluid">
+  <div class="row content">
+
+    <!-- Sidenav -->
+
+    <div class="col-xl-4 col-lg-4 col-md-5 sidenav">
+      <nav class="" role="navigation">
+        <div class="col-xl-10 col-lg-11 col-md-11 insidesidenav">
+          <div class="input-group searchandmenu">
+
+            <input type="text" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" alt="Search" title="Search">
+                <span class="icon-search"></span>
+                </button>
+              </span>
+
+            <span class="navbarbutton hidden-md-up">
+              <button type="button" class="btn btn-default navbar-toggle collapsed pull-xs-right" data-toggle="collapse" data-target="#collapsemenu" alt="Menu" title="Menu">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="burger_icon">&#9776;</span>
+              </button>
+            </span>
+
+          </div>
+          <br/>
+
+          <div class="collapse navbar-collapse navbar-toggleable-sm" id="collapsemenu">
+            <ul class="nav nav-pills nav-stacked sidenavline">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Main Menu Link 1</a>
+                <ul class="nav nav-pills nav-stacked submenustack">
+                  <li class="nav-item submenu" >
+                    <a class="nav-link submenu" href="#">Sub Menu Link 1</a>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link submenu" href="#">Sub Menu Link 2</a>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link submenu" href="#">Sub Menu Link 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Main Menu Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Main Menu Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- end Sidenav -->
+
+    <div class="col-md-7 maincontent" >
+      <ol class="gmt_breadcrumbs">
+        <li><a href="#">Home</a><span class="divider"> > </span></li>
+        <li><a href="#">Library</a><span class="divider"> > </span></li>
+        <li class="active">Data</li>
+      </ol>
+
+      <br class="clear">
+      <h1>Heading 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br>
+
+      <div class="row">
+        <div class="card col-xl-4">
+          <img class="card-img-top" src="http://placehold.it/220X170" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Card title - heading 4</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <button type="button" class="btn btn-secondary btn-sm">More info</button>
+          </div>
+        </div>
+        <div class="card col-xl-4">
+          <img class="card-img-top" src="http://placehold.it/220X170" alt="Card image cap">
+          <div class="card-block ">
+            <h4 class="card-title">Card title - heading 4</h4>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <button type="button" class="btn btn-secondary btn-sm">More info</button>
+          </div>
+        </div>
+        <div class="card col-xl-4">
+          <img class="card-img-top" src="http://placehold.it/220X170" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Card title - heading 4</h4>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <button type="button" class="btn btn-secondary btn-sm">More info</button>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="featurette">
+        <img class="img-circle col-xl-4 img-right"  src="http://placehold.it/220X220" alt="Card image cap">
+        <div class="col-xl-8">             
+          <h2 class="">Heading 2</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>       
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <div class="container">
+    <div class="row footer_logoline">
+      <div class="col-xl-4 col-md-6  footer_logos"><img class="" src="images/gmt_logo_footer.png" alt="" > 
+      </div>
+      <div class="col-xl-5 col-md-6 footer_logos"><img class="footer_racgp" src="images/group-122.png" alt="" > 
+      </div>
+      <div class="col-xl-3 col-md-12 govt_logo footer_logos"><img class="" src="images/govt_logo.png" alt="" > 
+      </div>                  
+    </div>
+    <div class="row">
+      <div class="footer_flags"><img class="footer_flags" src="images/banner-flags-stacked-web_v2.png" alt="Aboriginal and Torres Strait Islander flags" > 
+      </div>
+      <div class="footer_trad">
+        <p>Traditional owners
+        We acknowledge Australian Aboriginal People and Torres Strait Islander People as the first inhabitants of the nation, and acknowledge Traditional Owners of the lands where our staff and students live, learn, and work.
+        </p>
+        <p><a href="#">Australian Aboriginal and Torres Strait Islander information</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
