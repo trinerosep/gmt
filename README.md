@@ -8,7 +8,7 @@ Testing complete, looks good, responsive styles working correctly
 
 ## Firefox
 
-Changed .insidesidemenu to suit responsive styles appears to be working correctly now
+Changed .insidesidemenu to suit responsive styles, appears to be working correctly now
 
 ## Safari
 
