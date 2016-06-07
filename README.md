@@ -20,7 +20,8 @@ xl and lg screen look fine, however when reduced to md the search and hamburger 
 
 ## Opera
 
-Set background-color in the gradient top bar as this was not showing.  Icons and fonts not sized correctly, spacing is incorrect.
+Set background-color in the gradient top bar as this was not showing.  Icons, fonts sized wrong, spacing incorrect, round images mis-shaped.
+Tried on a different computer and is now showing perfectly, perhaps I had an outdated version.
 
 
 
