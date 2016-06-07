@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>GMT Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/jcu.css">
@@ -72,6 +72,13 @@
       padding-top: 2em;
     }
 
+    /* xxl screens */
+    @media all and (min-width: 1400px) {
+      .insidesidenav {
+        width: 400px;
+      }
+    }
+
     /* xl screens */
     @media (max-width: 75em) {
       .card-img-top {
@@ -91,7 +98,7 @@
       	text-align: center;
       }
       .header-image {
-				height: 280px !important;
+        height: 280px !important;
 			}
     }
     
@@ -113,14 +120,11 @@
         display: block !important;
       }
       .footer_flags {
-      float: left;
-      padding-left: 2em;
+        float: left;
+        padding-left: 2em;
       }      
       .gmt_breadcrumbs {
         padding: 1em 0;
-      }
-      .insidesidenav {
-        max-width: 100% !important;
       }
     }
 
@@ -182,7 +186,7 @@
     .navbar-header {
         margin-top: 6px;
         padding-right: 10px;
-        background-color: #000
+        background-color: #000;
     }
 
     .insidenavbrand {
@@ -227,7 +231,7 @@
     }
 
     .icons{
-      display:none;
+      display: none;
       font-size: 20px;
     }
 
@@ -245,7 +249,6 @@
       margin-top: -94px;
       float: right;
       z-index: 1000;
-      max-width: 400px;
     }
 
     .sidenavline {
@@ -287,7 +290,6 @@
       content: "\00BB \0020 ";
       padding-left: 20px; 
     }
-
 
     .maincontent {
       padding: 20px 0 10px 30px;
@@ -409,9 +411,9 @@
 
     <!-- Sidenav -->
 
-    <div class="col-xl-4 col-lg-4 col-md-5 sidenav">
+    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 sidenav">
       <nav class="" role="navigation">
-        <div class="col-xl-10 col-lg-11 col-md-11 insidesidenav">
+        <div class="col-xl-10 col-lg-11 col-md-11 col-sm-12 col-xs-12 insidesidenav">
           <div class="input-group searchandmenu">
 
             <input type="text" class="form-control" placeholder="Search...">
