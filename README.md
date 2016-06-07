@@ -4,15 +4,15 @@ Template will be used in CMS, need to test responsiveness and also browser compa
 
 ## Chrome
 
-Testing complete, looks good, responsiveness styles working correctly
+Testing complete, looks good, responsive styles working correctly
 
 ## Firefox
 
-Changed .insidesidemenu to suit responsiveness styles appears to be working correctly now
+Changed .insidesidemenu to suit responsive styles appears to be working correctly now
 
 ## Safari
 
-Testing complete, looks good, responsiveness styles working
+Testing complete, looks good, responsive styles working
 
 ## Internet Explorer
 
