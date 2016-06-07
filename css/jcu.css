@@ -6872,6 +6872,7 @@ _:-ms-fullscreen, :root .img-fluid[src$=".svg"], :root .carousel-inner > .carous
   background-image:         linear-gradient(to right, #FDB401 0%, #e94f35 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFDD00', endColorstr='#FFE94F35', GradientType=1);
   background-repeat: repeat-x;
+  background-color: #FDB401;
 }
 
 .jcu-bg--gradient-green {
