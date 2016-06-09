@@ -45,9 +45,10 @@
       text-decoration: none;
     } 
 
-    .footer_flags {
+    .footer_flags img{
       float: left;
       padding-right: 10px;
+      width: 10em;
     }   
 
     .footer_logoline {
@@ -59,18 +60,33 @@
       padding-left: 2em;
     }
 
+    .footer_logos_racgprural{
+      padding-top: 3em;
+      text-align: center;
+    }
+
     .footer_racgp {
-      padding-top: 10px;
+      width: 14em;
+      margin-right: 3em;
     }
 
     .footer_rural {
-      padding-top: 10px;
+      width: 14em;
+      margin-right: 1em;
     }
+
 
     .footer_logos {
       text-align: none;
       padding-top: 2em;
+
     }
+  
+    .footer_logos img{
+      max-height: 7em;
+    } 
+
+
 
     /* xxl screens */
     @media all and (min-width: 1400px) {
@@ -87,6 +103,12 @@
       .card-block {
         padding-top: 0;
       }
+      .footer_racgp {
+        float: left;
+      }
+      .footer_rural {
+        float: right;
+      }
     }  
 
     /* lg screens */
@@ -100,6 +122,12 @@
       .header-image {
         height: 280px !important;
 			}
+      .footer_logos img{
+        max-width: 36em;
+      }  
+            .sidenav {
+        height: 200% !important;
+      }
     }
     
     /* md screens */
@@ -126,6 +154,16 @@
       .gmt_breadcrumbs {
         padding: 1em 0;
       }
+      .navbar-brand-gmt img{
+        width:16em;
+        padding-top: .5em;
+      }
+      .footer_racgp {
+        float: none;
+      }
+      .footer_rural {
+        float: none;
+      }
     }
 
     /* sm screens */
@@ -138,10 +176,6 @@
       }
       .nav-link {
         margin:0 !important;
-      }
-      .navbar-brand-gmt img{
-        width:16em;
-        padding-top: .5em;
       }
       .bkgsearchmenu{
         background-color: #F6F8F8;
@@ -169,7 +203,6 @@
     }
 
     @media (max-width: 26em) {
-
       .navbar-brand-gmt img{
         width:12em;
         padding-top: 1em;
@@ -192,9 +225,11 @@
     .insidenavbrand {
         float: left;
     }
-    .insidenavbrand img{
+
+    .navbar-brand-gmt img{
         float: right;
-        padding-right: 10px;  
+        padding-right: 10px; 
+        max-width: 20em; 
     }
 
     .topnav {
@@ -242,7 +277,7 @@
     /* sidenav */
     .sidenav {
       background-color: #F6F8F8;
-      height: 120%;
+      height: 130%;
     }
 
     .insidesidenav {
@@ -372,7 +407,14 @@
 
   </style>
 </head>
-<body>
+<body id="page-top" role="document">
+  <a  class="sr-only sr-only-focusable" href="#main">
+    <div class="container-fluid bg-inverse text-inverse p-y-1">
+    <div class="container">
+      Skip to main content
+      </div>
+    </div>
+  </a>
 
 <!-- Navigation -->
 <header id="header" class="header clearfix">
@@ -380,7 +422,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <div class="col-xl-4 col-lg-4 col-md-5 insidenavbrand">
-          <a class="navbar-brand-gmt" href="#top-page-banner"><img src="images/gmt_logo.png" alt="logo" role="banner"></a>
+          <a class="navbar-brand-gmt" href="#top-page-banner"><img src="svgs/gmt_logo_top.svg" alt="Generalist Medical Training at James Cook University Logo" title="(GMT) Generalist Medical Training at James Cook University" role="banner"></a>
         </div>
       </div> <!-- .navbar-header -->
              
@@ -388,7 +430,7 @@
       <div class="col-md-7">
           <nav class="topnav">
                   <a class="nav-link active" href="#about" title="Contact Information" alt="Contact Information"><span class="icons icon-phonebook"></span> <span class="topnavlinks">Contact Us</span></a>
-                  <a class="nav-link" href="#services" title="Login to MYGMT" alt="Login to MYGMT"><span class="icons icon-user"></span> <span class="topnavlinks">MYGMT Login</span></a>
+                  <a class="nav-link" href="#services" title="Login to MYGMT" alt="Login to MYGMT"><span class="icons icon-user"></span> <span class="topnavlinks"><abbr title="My Generalist Medical Training">MYGMT </abbr> Login</span></a>
           </nav>
       </div><!-- .navbar-collapse -->
 
@@ -466,7 +508,7 @@
 
     <!-- end Sidenav -->
 
-    <div class="col-md-7 maincontent" >
+    <main id="main" class="col-md-7 maincontent" >
       <ol class="gmt_breadcrumbs">
         <li><a href="#">Home</a><span class="divider"> > </span></li>
         <li><a href="#">Library</a><span class="divider"> > </span></li>
@@ -518,28 +560,29 @@
         </div>       
       </div>
 
-    </div>
+    </main>
   </div>
 </div>
 
 <footer class="container-fluid">
   <div class="container">
     <div class="row footer_logoline">
-      <div class="col-xl-4 col-md-6  footer_logos"><img class="" src="images/gmt_logo_footer.png" alt="" > 
+      <div class="col-xl-4 col-md-6  footer_logos"><img class="" src="svgs/gmt_logo_footer.svg" alt="Generalist Medical Training at James Cook University Logo" title="(GMT) Generalist Medical Training at James Cook University"> 
       </div>
-      <div class="col-xl-5 col-md-6 footer_logos"><img class="footer_racgp" src="images/group-122.png" alt="" > 
+      <div class="col-xl-4 col-md-6 footer_logos_racgprural" ><img class="footer_racgp" src="svgs/racgp_logo_footer.svg" alt="Royal Australian College of General Practitioners Logo" title="(RACGP) Royal Australian College of General Practitioners" > <img class="footer_rural" src="svgs/rural_logo_footer.svg" alt="Australian College of Rural and Remote Medicine Logo" title="Australian College of Rural and Remote Medicine - World leaders in rural practice" > 
       </div>
-      <div class="col-xl-3 col-md-12 govt_logo footer_logos"><img class="" src="images/govt_logo.png" alt="" > 
+      <div class="col-xl-4 col-md-12 govt_logo footer_logos"><img class="" src="svgs/govt_agpt_logo_footer.svg" alt="Australian General Practice Training (AGPT) program is an Australian Government initiative" title="Australian Government initiative (AGPT) Australian General Practice Training logo"> 
       </div>                  
     </div>
     <div class="row">
-      <div class="footer_flags"><img class="footer_flags" src="images/banner-flags-stacked-web_v2.png" alt="Aboriginal and Torres Strait Islander flags" > 
+      <div class="footer_flags"><img class="" src="svgs/banner-flags-stacked-web_v2.svg" alt="Aboriginal and Torres Strait Islander flags" title="Traditional Aboriginal and Torres Strait Islander flags"> 
       </div>
       <div class="footer_trad">
         <p>Traditional owners
         We acknowledge Australian Aboriginal People and Torres Strait Islander People as the first inhabitants of the nation, and acknowledge Traditional Owners of the lands where our staff and students live, learn, and work.
         </p>
-        <p><a href="#">Australian Aboriginal and Torres Strait Islander information</a></p>
+        <p><a href="#" alt="More information on Australian Aboriginal and Torres Strait Islander" title="JCU's Australian Aboriginal and Torres Strait Islander information portal">Australian Aboriginal and Torres Strait Islander information</a></p>
+        <p class="pull-sm-right"><a class="page-scroll" href="#page-top"><span class="icon-chevronup" aria-hidden="true"></span> Back to top</a></p>
       </div>
     </div>
   </div>
