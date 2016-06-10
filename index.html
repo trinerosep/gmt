@@ -443,9 +443,9 @@
     }
 
     hr {
-      padding: 10px 0;
+      margin: 1em 0;
+      padding: 1em 0 !important;
     }
-
 
 
   </style>
@@ -471,8 +471,8 @@
                
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="col-md-7">
-            <nav class="topnav">
-                    <a class="nav-link active" href="#about" title="Contact Information" alt="Contact Information"><span class="icons icon-phonebook"></span> <span class="topnavlinks">Contact Us</span></a>
+            <nav class="topnav" role="quicklinks">
+                    <a class="nav-link active" href="#about" title="Contact Information" alt="Contact Information" ><span class="icons icon-phonebook"></span> <span class="topnavlinks">Contact Us</span></a>
                     <a class="nav-link" href="#services" title="Login to MYGMT" alt="Login to MYGMT"><span class="icons icon-user"></span> <span class="topnavlinks"><abbr title="My Generalist Medical Training">MYGMT </abbr> Login</span></a>
             </nav>
         </div><!-- .navbar-collapse -->
@@ -497,11 +497,14 @@
       <!-- Sidenav -->
 
       <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 sidenav">
-        <nav class="" role="navigation">
+        <nav class="" >
           <div class="col-xl-10 col-lg-11 col-md-11 col-sm-12 col-xs-12 insidesidenav">
             <div class="input-group searchandmenu">
+            <label class="sr-only sr-only-focusable" for="search_placeholder_text">
+            Search...
+            </label>
 
-              <input type="text" class="form-control" placeholder="Search...">
+              <input id="search_placeholder_text" type="text" class="form-control" placeholder="Search...">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button" alt="Search" title="Search">
                   <span class="icon-search"></span>
@@ -519,7 +522,7 @@
             <br/>
 
             <div class="collapse navbar-collapse navbar-toggleable-sm" id="collapsemenu">
-              <ul class="nav nav-pills nav-stacked sidenavline">
+              <ul class="nav nav-pills nav-stacked sidenavline" role="navigation">
                 <li class="nav-item">
                   <a class="nav-link " href="#">Home</a>
                 </li>
@@ -551,7 +554,7 @@
 
       <!-- end Sidenav -->
 
-      <main id="main" class="col-md-7 maincontent" >
+      <main id="main" class="col-md-7 maincontent" role="maincontent">
         <ol class="gmt_breadcrumbs">
           <li><a href="#">Home</a><span class="divider"> > </span></li>
           <li><a href="#">Library</a><span class="divider"> > </span></li>
@@ -563,7 +566,22 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <br>
+ 
+
+        <hr class="clear">
+
+        <div class="featurette">
+          <img class="img-circle img-fluid img-right"  src="http://placehold.it/220X220" alt="Card image cap"><br>
+          <div class="col-xl-8">             
+            <h2 class="">Heading 2</h2>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>       
+        </div>
+
+
+        <hr class="clear">
+
 
         <div class="row">
           <div class="card col-xl-4">
@@ -592,16 +610,6 @@
           </div>
         </div>
 
-        <hr>
-
-        <div class="featurette">
-          <img class="img-circle img-fluid img-right"  src="http://placehold.it/220X220" alt="Card image cap">
-          <div class="col-xl-8">             
-            <h2 class="">Heading 2</h2>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>       
-        </div>
         <br/>
         <br/>
 
@@ -611,7 +619,7 @@
 
   <footer class="container-fluid">
     <div class="container">
-      <div class="row footer_logoline">
+      <div class="row footer_logoline" role="footer">
         <div class="col-xl-4 col-md-6  footer_logos"><img class="" src="svgs/gmt_logo_footer.svg" alt="Generalist Medical Training at James Cook University Logo" title="(GMT) Generalist Medical Training at James Cook University"> 
         </div>
         <div class="col-xl-4 col-md-6 footer_logos_racgprural" ><img class="footer_racgp" src="svgs/racgp_logo_footer.svg" alt="Royal Australian College of General Practitioners Logo" title="(RACGP) Royal Australian College of General Practitioners" > <img class="footer_rural" src="svgs/rural_logo_footer.svg" alt="Australian College of Rural and Remote Medicine Logo" title="Australian College of Rural and Remote Medicine - World leaders in rural practice" > 
