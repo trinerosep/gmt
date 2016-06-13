@@ -9,7 +9,9 @@ Try using tota11y on your page -- that's the glasses in the bottom left on my We
 ## Top nav:
 I'd suggest shifting the hamburger menu to the top fixed nav.  The page nav is likely to be lost/missed otherwise on mobile devices, especially once they scroll.
 The icons on the orange fixed nav (on mobile) don't have a lot of meaning for me as a visitor.  I'm not necessarily the target audience but you might want to do a quick test with some users to make sure they understand what are are without text.
-## Left nav:  I'm wondering whether a continuation of the orange colouring would work here to keep the vibrancy of the page.  See the attached screenshots for an example, though you may want to dull it down for accessibility.  It's nit-picking, but I kind of feel the left nav gets a little lost otherwise with the grey.
+## Left nav:
+### Prevously had orange menu and was changed to grey
+I'm wondering whether a continuation of the orange colouring would work here to keep the vibrancy of the page.  See the attached screenshots for an example, though you may want to dull it down for accessibility.  It's nit-picking, but I kind of feel the left nav gets a little lost otherwise with the grey.
 ## Breadcrumbs: Bootstrap's got a Breadcrumb component that you can build off; it avoids the need to manually insert separators into the HTML, which is better for accessibility / developers editing later.  It also makes the divider customisable with just CSS.
 ## HTML:
 Make sure your <head>'s <meta> tags come in the exact order shown in examples like https://web.jcu.io/examples/jcu-login/ (see the comment on line 12).  Internet Explorer is particularly picky about the tag from line 10 so you should shift your <title> element after the 3 suggested tags.
