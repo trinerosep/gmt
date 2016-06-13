@@ -1,0 +1,6 @@
+List of glyphs to be added to the set
+
+panda
+koala
+poop
+kiwi
