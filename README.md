@@ -1,7 +1,5 @@
 # Features changes based on David's feedback
 
-# Before changes based on David's feedback
-
 ## General:
 Use SVG images for all your vector artwork wherever you can. SVGs are supported by all browsers (except ancient IE or ancient Android, which Bootstrap doesn't support anyway).  It'll avoid pixellation or scaling issues, especially on retina devices and avoid the need to ever resize an image by hand.  For your collaborator logos, converting EPS/AI/etc files to SVG is straightforward with Illustrator or Inkscape and for optimisation try the SVGO Node tool.
 For accessibility, make sure acronyms like MYGMT are explained with an abbr tag and all your images have reasonably detailed alt text (eg "Generalist Medical Training at James Cook University logo" vs "logo")
