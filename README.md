@@ -12,7 +12,8 @@ The icons on the orange fixed nav (on mobile) don't have a lot of meaning for me
 ## Left nav:
 ### Prevously had orange menu and was changed to grey
 I'm wondering whether a continuation of the orange colouring would work here to keep the vibrancy of the page.  See the attached screenshots for an example, though you may want to dull it down for accessibility.  It's nit-picking, but I kind of feel the left nav gets a little lost otherwise with the grey.
-## Breadcrumbs: Bootstrap's got a Breadcrumb component that you can build off; it avoids the need to manually insert separators into the HTML, which is better for accessibility / developers editing later.  It also makes the divider customisable with just CSS.
+## Breadcrumbs: 
+Bootstrap's got a Breadcrumb component that you can build off; it avoids the need to manually insert separators into the HTML, which is better for accessibility / developers editing later.  It also makes the divider customisable with just CSS.
 ## HTML:
 Make sure your <head>'s <meta> tags come in the exact order shown in examples like https://web.jcu.io/examples/jcu-login/ (see the comment on line 12).  Internet Explorer is particularly picky about the tag from line 10 so you should shift your <title> element after the 3 suggested tags.
 It's best to put your JavaScript <script> tags just before the closing </body> tag.  This means the browser loads the page first then executes the JS, rather than blocking rendering while loading JS.  It also means that you can add any per-page customisations at the end of the document and avoid the need for jQuery $(document).ready() calls, making your page even faster.
