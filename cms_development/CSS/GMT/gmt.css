@@ -1,9 +1,8 @@
-/*!
+/*
 JCU Microsites GMT CSS
- */
- 
+*/
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1200px}
+    .row.content {height: 1300px}
 
     .content {
       padding-bottom: 2em;
@@ -61,7 +60,7 @@ JCU Microsites GMT CSS
         display: block;
         width: 100%;
         text-align: center;
-        background: url("beach.jpg") no-repeat center center scroll;
+        background: url("mysource_files/beach.jpg") no-repeat center center scroll;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
         background-size: 100%;
@@ -89,6 +88,18 @@ JCU Microsites GMT CSS
       margin-top: -94px;
       float: right;
       z-index: 1000;
+    }
+
+    .nav-item a{
+      display: block;
+      padding: .5em 1em;
+      background-color: #6c6c6c;
+      color: #fff;
+    }
+
+    .nav-item a:hover{
+      background-color: #4d4d4d;
+      text-decoration: none;
     }
 
     .sidenavline {
@@ -276,6 +287,17 @@ JCU Microsites GMT CSS
       max-height: 7em;
     } 
 
+    /* workaround for search bar lineup */
+    .input-group form {
+        position: relative;
+        display: table;
+        float: left;
+    }
+    /* workaround no padding on mobile menu*/   
+    .col-xs-12, .col-sm-12, .col-md-11, .col-xl-10, .col-lg-11 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
 
 
     /* xxl screens */
@@ -329,6 +351,9 @@ JCU Microsites GMT CSS
     
     /* md screens */
     @media screen and (max-width: 48em) {
+      .input-group form {
+        width: 90%;
+      }
       .sidenav {
         height: auto;
       }
@@ -347,9 +372,10 @@ JCU Microsites GMT CSS
         padding: 1em;
         left: 0;
         width: 100%;
+        z-index: 2;
       }
       #collapsemenu {
-        position: fixed;
+        position: relative;
         background-color: #F6F8F8;
         padding: 1em;
         width: 100%;
@@ -378,6 +404,9 @@ JCU Microsites GMT CSS
 
     /* sm screens */
     @media (max-width: 34em) {
+      .input-group form {
+        width: 70%;
+      }
       .header-image {
         display: none !important;
       }
@@ -390,6 +419,7 @@ JCU Microsites GMT CSS
       .bkgsearchmenu{
         background-color: #F6F8F8;
         height:70px;
+        z-index: 2;
       }
       .maincontent{
         top: 10px;
@@ -404,7 +434,7 @@ JCU Microsites GMT CSS
         width: 100%;
       }
       #collapsemenu {
-        position: fixed;
+        position: relative;
         background-color: #F6F8F8;
         padding: 1em;
         width: 100%;
@@ -440,5 +470,3 @@ JCU Microsites GMT CSS
         padding-top: 1em;
       }
     }
-
-    

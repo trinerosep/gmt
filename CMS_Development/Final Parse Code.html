@@ -1,0 +1,222 @@
+<MySource_AREA id_name="exit_area" design_area="exit" print="no"></MySource_AREA>
+<MySource_AREA id_name="nested_EES_code" design_area="nest_content" print="no" />
+<MySource_AREA id_name="simple_edit_EES" design_area="show_if">
+    <MySource_SET name="condition" value="simple_edit_mode" />
+    <MySource_THEN>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>                
+                <title>Loading Easy Edit Suite...</title>
+                <!-- Force IE10 to IE9 standards. 7,8,9 act unchanged. 11 & edge act unchanged -->
+               <!-- <meta http-equiv="X-UA-Compatible" content="IE=7,8,9,EmulateIE9,11" /> -->
+                <meta charset="utf-8" />
+                <MySource_PRINT id_name="nested_EES_code" />
+            </head>
+            <body></body>
+        </html>
+        <MySource_PRINT id_name="exit_area" />
+    </MySource_THEN>
+</MySource_AREA>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="mysource_files/favicon.ico">
+
+  <!-- CSS -->
+  <MySource_AREA id_name="CSS_jcu" design_area="linked_css" />
+  <MySource_AREA id_name="CSS_gmt" design_area="linked_css" />
+  
+  <link rel="stylesheet" type="text/css" href="./?a=3406?v=%globals_asset_version:3406%"> <!-- Webglyphs -->
+
+  <title>
+      <MySource_PRINT id_name="__global__" var="site_name" /> -
+    <MySource_PRINT id_name="__global__" var="asset_name" />
+  </title>
+
+  <!-- Declared Vars design area goes here -->
+
+
+  <!-- Metadata design area goes here -->
+
+</head>
+<body id="page-top" role="document">
+  <a  class="sr-only sr-only-focusable" href="#main">
+    <div class="container-fluid bg-inverse text-inverse p-y-1">
+    <div class="container">
+      Skip to main content
+      </div>
+    </div>
+  </a>
+
+  <!-- Navbar Header -->
+  <header id="header" class="header clearfix">
+    <div class="jcu-bg--gradient-orange-rev navbar-fixed-top grad">   
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="col-xl-4 col-lg-4 col-md-5 insidenavbrand">
+            <a class="navbar-brand-gmt" href="<MySource_PRINT id_name="__global__" var="site_link" full_url="true"/>" title="Generalist Medical Training at James Cook University - Home"><img src="mysource_files/gmt_logo_top.svg" alt="Generalist Medical Training at James Cook University Logo" title="(GMT) Generalist Medical Training at James Cook University" role="banner"></a>
+          </div>
+        </div> <!-- .navbar-header -->
+
+        <!-- Constant Buttons -->
+        <div class="col-md-7">
+            <nav class="topnav" role="quicklinks">
+                <MySource_AREA id_name="contact_us" design_area="constant_button">
+                    <a class="nav-link active" title="Generalist Medical Training at James Cook University Contact Information" alt="Generalist Medical Training at James Cook University Contact Information" <MySource_PRINT var="href" />><span class="icons icon-phonebook"></span> <span class="topnavlinks">Contact Us</span>
+                    </a>
+                </MySource_AREA>
+                <MySource_AREA id_name="mygmt" design_area="constant_button">
+                    <a class="nav-link" title="MyGMT Restricted Access - Login" alt="MyGMT Restricted Access - Login" <MySource_PRINT var="href" />><span class="icons icon-user"></span> <span class="topnavlinks">My<abbr title="Generalist Medical Training">GMT</abbr> Login</span>
+                    </a>
+                </MySource_AREA>
+            </nav>
+        </div><!-- End Constant Buttons -->
+
+      </div><!-- end container-->
+    </div><!--end navbar-fixed-top -->
+  </header>
+
+  <header class="bkgsearchmenu"></header>
+
+
+  <!-- Full Width Image Header -->
+  <header class="header-image">
+  </header>
+
+
+  <div class="container-fluid">
+    <div class="row content">
+
+      <!-- Left Column-->
+      <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 sidenav">
+        <nav class="" >
+          <div class="col-xl-10 col-lg-11 col-md-11 col-sm-12 col-xs-12 insidesidenav">
+            <div class="input-group searchandmenu">
+
+            <!-- search box design area goes here -->
+            <MySource_AREA id_name="search_box" design_area="searchbox">
+                <MySource_PRINT var="form_start" />
+                <MySource_PRINT class="form-control" var="box" />
+                    <span class="input-group-btn">
+                        <MySource_PRINT class="btn btn-default" var="submit" />
+                    </span>
+                <MySource_PRINT var="form_end" />
+            </MySource_AREA>
+            
+              <span class="navbarbutton hidden-md-up">
+                <button type="button" class="btn btn-default navbar-toggle collapsed pull-xs-right" data-toggle="collapse" data-target="#collapsemenu" alt="Menu" title="Menu">
+                  <span class="sr-only">Toggle Navigation</span>
+                  <span class="burger_icon">&#9776;</span>
+                </button>
+              </span>
+
+            </div>
+            <br/>
+
+            <!-- Main Nav goes here-->
+            <div class="collapse navbar-collapse navbar-toggleable-sm" id="collapsemenu">
+                
+                <MySource_AREA id_name="sub_nav" design_area="menu_normal">
+                    <MySource_SET name="level" value="top" />
+                    <MySource_SET name="show_subs" value="always" />
+                    <MySource_SET name="settings.class.normal" value="" />
+                    <MySource_SET name="settings.class.current" value=" class='current'" />
+                    <MySource_SET name="settings.class.hierarchy" value=" class='current'" />
+                        <ul class="nav nav-pills nav-stacked sidenavline" role="navigation">
+                            <MySource_ASSET>
+                                <li class="nav-item"><a  class="nav-link" href="<MySource_PRINT var='asset_link' />" title="<MySource_PRINT var="asset_short_name" />"> <MySource_PRINT var="asset_short_name" /></a>
+                                    <MySource_SUB design_area="menu_normal">
+                                        <MySource_SET name="level" value="sub" />
+                                        <MySource_SET name="show_subs" value="always" />
+                                        <MySource_SET name="settings.class.normal" value="" />
+                                        <MySource_SET name="settings.class.current" value="class='current'" />
+                                        <MySource_SET name="settings.class.hierarchy" value="class='hier'" />
+                                        <ul class="nav nav-pills nav-stacked submenustack">
+                                            <MySource_ASSET>
+                                                <li class="nav-item submenu">
+                                                    <a class="nav-link submenu" href="<MySource_PRINT var="asset_link" />"><MySource_PRINT var="asset_name"/></a>
+                                                </li>
+                                           </MySource_ASSET>
+                                        </ul>
+                                    </MySource_SUB>
+                                </li>
+                            </MySource_ASSET>
+                        </ul>
+                </MySource_AREA> 
+                
+            </div>
+            <!-- End Main Nav -->
+            
+        <br />
+
+          </div>
+        </nav>
+      </div>
+      <!-- End Left Column -->
+
+
+      <main id="main" class="col-md-7 maincontent" role="maincontent">
+          
+        <!-- asset lineage design area goes here -->
+        <ol class="gmt_breadcrumbs">
+            <li>
+                <a href="<MySource_PRINT id_name="__global__" var="site_link" full_url="true"/>">Home</a><span class="divider"> > </span>
+            </li>
+            <MySource_AREA id_name="Breadcrumb" design_area="asset_lineage">
+                <MySource_SET name="prefix_with_divider" value="false" />
+                <MySource_SET name="suffix_with_divider" value="false" />
+                <MySource_SET name="prefix_with_home_link" value="false" />
+                <MySource_SET name="suffix_with_current_link" value="false" />
+                <MySource_SET name="show_hidden_links" value="false" />
+                    <MySource_ASSET>
+
+                            <li>
+                                <a href="<MySource_PRINT var="asset_link"/>">
+                                <MySource_PRINT var="asset_short_name" />
+                                </a><span class="divider"> > </span>
+                            </li>
+
+                    </MySource_ASSET>
+                <MySource_DIVIDER> > </MySource_DIVIDER>
+            </MySource_AREA>
+
+            <li class="active"><MySource_PRINT var="asset_short_name" /></li>
+        </ol>
+        <!-- asset lineage design area goes here -->
+
+        <br class="clear">
+        <h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1>
+
+        <!-- body content design area goes here -->
+        <MySource_AREA id_name="body" design_area="body" /> 
+        <!-- end body content -->
+
+        <br/>
+        <br/>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- footer nest content design area goes here -->
+    <MySource_AREA id_name="footer" design_area="nest_content" />    
+  <!-- end footer nest content -->
+
+
+  <!-- Bootstrap Core JavaScript -->
+
+  <!-- Google Maps API - You must use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./?a=277971?v=%globals_asset_version:277971%"></script>
+
+</body>
+</html>
