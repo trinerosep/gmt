@@ -88,6 +88,7 @@ JCU Microsites GMT CSS
       margin-top: -94px;
       float: right;
       z-index: 1000;
+      margin-right: 1rem;
     }
 
     .nav-item a{
@@ -142,6 +143,11 @@ JCU Microsites GMT CSS
       padding-left: 20px; 
     }
 
+    .subsubmenustack .nav-link {
+      padding-left: 40px !important;
+      color: #999 !important;
+    }
+
     .maincontent {
       padding: 20px 0 10px 30px;
     }
@@ -151,6 +157,7 @@ JCU Microsites GMT CSS
     .gmt_breadcrumbs {
       list-style: none;
       padding-bottom: 1em;
+      margin-left: 0 !important;
     }
 
     .gmt_breadcrumbs a:hover{
@@ -184,16 +191,22 @@ JCU Microsites GMT CSS
     H2 {
       color: #6C6C6C;  
       font-weight: 300;
+      padding-top: 20px;
     }
 
     H3 {
       color: #6C6C6C;  
-      font-weight: 300;
+      font-weight: 600;
+      padding-top: 10px;
+      font-size: 1.3rem;
     }
 
     H4 {
       color: #6C6C6C;  
-      font-weight: 300;
+      font-weight: 600;
+      padding-top: 10px;
+      font-size: 1rem;
+      margin-bottom: 8px !important;
     }
 
     /* cards */  
@@ -220,8 +233,7 @@ JCU Microsites GMT CSS
     }
 
     hr {
-      margin: 1em 0;
-      padding: 1em 0 !important;
+      margin: 20px 0 20px 0;
     }
     
     /* footer */
@@ -297,6 +309,40 @@ JCU Microsites GMT CSS
     .col-xs-12, .col-sm-12, .col-md-11, .col-xl-10, .col-lg-11 {
       padding-left: 0 !important;
       padding-right: 0 !important;
+    }
+
+    /* lists*/   
+    .maincontent ol ol {
+      list-style-type: lower-alpha;
+      padding: 6px 0;
+    }
+    .maincontent ol {
+      margin-left: 40px;
+    }
+    .maincontent li {
+      margin-bottom: 8px;
+    }
+
+    /* links */   
+    .maincontent a:hover {
+      color: #EB5F2E;
+      text-decoration: none;
+    }
+
+
+    /* forms */   
+    .maincontent label {
+      margin-top: 1rem;
+    }
+    .maincontent input {
+      width: 100%;
+    }
+    .maincontent textarea {
+      width: 100%;
+    }
+    .maincontent input[type="submit"] {
+      width: 100px;
+      margin-top: 1rem;
     }
 
 
