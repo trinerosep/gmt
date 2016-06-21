@@ -1,12 +1,14 @@
 /*
 JCU Microsites GMT CSS
 */
+
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1300px}
+    .row.content {height: 1200px}
 
     .content {
       padding-bottom: 2em;
     }
+
     
     /* Set gray background color and 100% height */
     body {
@@ -208,6 +210,14 @@ JCU Microsites GMT CSS
       font-size: 1rem;
       margin-bottom: 8px !important;
     }
+    
+    H5 {
+      color: #EB5F2E;  
+      font-weight: 600;
+      padding-top: 10px;
+      font-size: 1rem;
+      margin-bottom: 8px !important;
+    }
 
     /* cards */  
     .card {
@@ -323,6 +333,10 @@ JCU Microsites GMT CSS
       margin-bottom: 8px;
     }
 
+    .list-group {
+      margin-bottom: 1rem !important;
+    }
+
     /* links */   
     .maincontent a:hover {
       color: #EB5F2E;
@@ -344,6 +358,15 @@ JCU Microsites GMT CSS
       width: 100px;
       margin-top: 1rem;
     }
+    select#queries_region_query, select#queries_type_query {
+      width: 100%;
+      border: none;
+      line-height: 100px; 
+    }
+    select#queries_region_query option, select#queries_type_query option {
+      padding: 3px 0;
+    }
+
 
 
     /* xxl screens */
